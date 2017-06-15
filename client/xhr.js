@@ -147,6 +147,10 @@ module.exports = client(function xhr (request) {
         // IE 6 will not support error handling
       }
 
+      if (entity === undefined) {
+				entity = null;
+			}
+
       client.send(entity)
     } catch (e) {
       response.error = 'loaderror'
